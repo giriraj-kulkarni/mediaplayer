@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling on the entire page */
+}
+
+.header {
+    background: url('pexels-kadri-võsumäe-756903.jpg') center/cover;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    z-index: 2; /* Ensure the header is on top */
+}
+
+.logo {
+    flex-grow: 1;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.container {
+    display: flex;
+}
+
+/* Existing styles remain unchanged */
+.side-nav {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    height: calc(100vh - 100px);
+    position: absolute;
+    top: 140px;
+    border-right: 1px solid #ccc; /* Add a border to the right side of the side-nav */
+
+}
+
+.side-nav a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Add a border below each link */
+}
+
+.side-nav a:last-child {
+    border-bottom: none; /* Remove border from the last link to prevent double border */
+}
+
+
+.side-nav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+.nav-item {
+    position: relative;
+}
+
+.dropdown-content {
+    width: 200px;
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+
+div.main-content {
+    flex-grow: 1;
+    padding: 1px 16px;
+    height: 100vh;
+    overflow-y: auto;
+    margin-left: 200px;
+    position: relative; /* Set position to relative for absolute positioning */
+}
+
+
+
+
+div.window-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff; /* Set the background color for the window */
+    border: 1px solid #ccc; /* Optional: Add a border to the window */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a more prominent look */
+}
+
+
+@media screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .side-nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0; /* Reset the position for smaller screens */
+        position: relative;
+    }
+
+    div.main-content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .side-nav a {
+        text-align: center;
+        float: none;
+    }
+}
+#youtubeVideoContainer {
+    /* Adjust the following properties based on your layout needs */
+    
+    /* Add padding for spacing around the container */
+    background-color: #fff; /* Set a background color for the container */
+    border: 1px solid #ccc; /* Optional: Add a border for a visual distinction */
+    height: 540px;
+margin-top: 10px;
+    /* If the text color is not crucial, you can omit this property */
+    color: black;
+}
